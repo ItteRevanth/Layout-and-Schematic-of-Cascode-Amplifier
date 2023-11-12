@@ -1,0 +1,30 @@
+timestamp 1699376523
+version 8.3
+tech scmos
+style lambda=0.6(hp)
+scale 1000 1000 60
+resistclasses 99630 120000 25000 60 40 1500000
+node "gnd" 1354 5.118 -6 -94 ppc 60 32 48 48 0 0 198 94 0 0 0 0
+node "Vin" 103 5.797 4 -71 pc 0 0 0 0 132 58 60 38 0 0 0 0
+node "a_13_n82#" 683 2.196 13 -82 ndiff 100 60 0 0 0 0 88 52 0 0 0 0
+node "Vbias3" 96 5.309 4 -63 pc 0 0 0 0 120 54 60 38 0 0 0 0
+node "Vout" 367 3.45 1 -58 ndiff 60 32 60 32 0 0 156 86 0 0 0 0
+node "Vbias2" 131 0 4 -20 pc 0 0 0 0 84 50 60 38 0 0 0 0
+node "a_11_n31#" 766 0 11 -31 pdiff 0 0 120 64 0 0 92 54 0 0 0 0
+node "Vbias1" 138 0 4 -12 pc 0 0 0 0 88 52 60 38 0 0 0 0
+node "vdd" 3302 83.911 -10 -37 nw 48 48 60 32 0 0 186 88 0 0 2145 188
+cap "vdd" "Vbias1" 4.745
+cap "Vin" "Vbias3" 0.27
+cap "vdd" "Vbias2" 4.557
+cap "a_11_n31#" "vdd" 2.07
+cap "Vbias2" "Vbias1" 0.255
+cap "Vout" "vdd" 0.828
+cap "a_11_n31#" "Vbias1" 0.054
+cap "a_11_n31#" "Vbias2" 0.054
+fet nfet 7 -82 8 -81 60 32 "Gnd!" "Vin" 12 0 "gnd" 10 0 "a_13_n82#" 10 0
+fet nfet 7 -58 8 -57 60 32 "Gnd!" "Vbias3" 12 0 "Vout" 10 0 "a_13_n82#" 10 0
+fet pfet 7 -31 8 -30 40 28 "vdd" "Vbias2" 8 0 "Vout" 10 0 "a_11_n31#" 10 0
+fet pfet 7 -6 8 -5 40 28 "vdd" "Vbias1" 8 0 "vdd" 10 0 "a_11_n31#" 10 0
+subcap "Vin" -3.457
+subcap "Vbias3" -2.969
+subcap "Vout" -0.15

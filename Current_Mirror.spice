@@ -1,0 +1,43 @@
+* SPICE3 file created from Current_Mirror.ext - technology: scmos
+
+.option scale=0.6u
+
+M1000 Vdd Vbiasp Vbias3 Vdd pfet w=48 l=4
++  ad=750 pd=340 as=240 ps=106
+M1001 Vbias1 Vbias2 a_n115_n62# Vdd pfet w=48 l=4
++  ad=240 pd=106 as=480 ps=212
+M1002 Vdd Vbias1 a_n115_n62# Vdd pfet w=48 l=4
++  ad=0 pd=0 as=0 ps=0
+M1003 Vbias1 Vbias3 a_n115_n128# Gnd nfet w=20 l=4
++  ad=100 pd=50 as=200 ps=100
+M1004 a_n115_n128# a_n191_n179# gnd Gnd nfet w=20 l=4
++  ad=0 pd=0 as=450 ps=220
+M1005 a_n151_n176# Vbias3 Vbias2 Gnd nfet w=20 l=4
++  ad=200 pd=100 as=100 ps=50
+M1006 gnd Vbias3 Vbias3 Gnd nfet w=30 l=4
++  ad=0 pd=0 as=150 ps=70
+M1007 gnd a_n191_n179# a_n151_n176# Gnd nfet w=20 l=4
++  ad=0 pd=0 as=0 ps=0
+M1008 a_n191_n179# Vbiasp Vdd Vdd pfet w=48 l=4
++  ad=240 pd=106 as=0 ps=0
+M1009 a_n191_n179# Vbias3 a_n196_n176# Gnd nfet w=20 l=4
++  ad=100 pd=50 as=200 ps=100
+M1010 Vdd Vbias2 Vbias2 Vdd pfet w=6 l=4
++  ad=0 pd=0 as=30 ps=22
+M1011 gnd a_n191_n179# a_n196_n176# Gnd nfet w=20 l=4
++  ad=0 pd=0 as=0 ps=0
+C0 Vdd Vbiasp 12.24fF
+C1 Vdd Vbias2 16.25fF
+C2 Vdd Vbias3 2.62fF
+C3 Vdd a_n191_n179# 2.62fF
+C4 Vdd Vbias1 20.76fF
+C5 Vdd a_n115_n62# 3.99fF
+C6 a_n115_n128# Gnd 5.51fF
+C7 a_n151_n176# Gnd 5.09fF
+C8 a_n196_n176# Gnd 4.13fF
+C9 gnd Gnd 29.42fF
+C10 a_n191_n179# Gnd 9.66fF
+C11 Vbias3 Gnd 37.78fF
+C12 Vbias2 Gnd 6.21fF
+C13 Vbias1 Gnd 4.00fF
+C14 Vdd Gnd 943.23fF

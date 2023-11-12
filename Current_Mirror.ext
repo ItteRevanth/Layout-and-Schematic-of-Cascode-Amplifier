@@ -1,0 +1,46 @@
+timestamp 1699376808
+version 8.3
+tech scmos
+style lambda=0.6(hp)
+scale 1000 1000 60
+resistclasses 99630 120000 25000 60 40 1500000
+node "a_n115_n128#" 1037 5.508 -115 -128 ndc 200 100 0 0 0 0 184 100 0 0 0 0
+node "a_n151_n176#" 1037 5.094 -151 -176 ndiff 200 100 0 0 0 0 184 100 0 0 0 0
+node "a_n196_n176#" 1037 4.128 -196 -176 ndiff 200 100 0 0 0 0 144 80 0 0 0 0
+node "gnd" 6075 29.424 -244 -190 ppc 450 220 128 128 0 0 976 496 0 0 0 0
+node "a_n191_n179#" 2554 32.006 -191 -179 p 100 50 240 106 507 292 644 338 0 0 0 0
+node "Vbias3" 3044 37.782 -237 -138 ndiff 150 70 240 106 760 404 640 344 0 0 0 0
+node "Vbias2" 1136 6.21 -151 -128 ndiff 100 50 30 22 344 188 496 264 0 0 0 0
+node "Vbiasp" 835 0 -235 -13 pc 0 0 0 0 500 266 184 108 0 0 0 0
+node "a_n115_n62#" 2564 0 -115 -62 pdiff 0 0 480 212 0 0 140 78 0 0 0 0
+node "Vbias1" 1966 3.996 -113 63 pc 100 50 240 106 264 140 640 336 0 0 0 0
+node "Vdd" 8883 943.232 -248 -80 nw 128 128 750 340 0 0 1904 960 0 0 26082 646
+cap "Vbias2" "Vdd" 16.253
+cap "a_n115_n62#" "Vbias2" 0.054
+cap "Vbias1" "Vbias2" 0.108
+cap "a_n151_n176#" "a_n191_n179#" 1.076
+cap "a_n115_n128#" "a_n191_n179#" 0.054
+cap "Vbias3" "a_n191_n179#" 1.4475
+cap "Vdd" "a_n191_n179#" 2.616
+cap "Vbias3" "Vdd" 2.616
+cap "Vbias1" "Vbias3" 0.054
+cap "a_n115_n62#" "Vdd" 3.99
+cap "Vbias1" "Vdd" 20.756
+cap "Vbiasp" "a_n191_n179#" 0.054
+cap "Vbiasp" "Vbias3" 0.054
+cap "Vbias1" "a_n115_n62#" 0.054
+cap "Vbias3" "Vbias2" 0.054
+cap "Vbiasp" "Vdd" 12.239
+fet nfet -110 -176 -109 -175 80 48 "Gnd!" "a_n191_n179#" 8 0 "gnd" 20 0 "a_n115_n128#" 20 0
+fet nfet -146 -176 -145 -175 80 48 "Gnd!" "a_n191_n179#" 8 0 "a_n151_n176#" 20 0 "gnd" 20 0
+fet nfet -191 -176 -190 -175 80 48 "Gnd!" "a_n191_n179#" 8 0 "a_n196_n176#" 20 0 "gnd" 20 0
+fet nfet -110 -128 -109 -127 80 48 "Gnd!" "Vbias3" 8 0 "a_n115_n128#" 20 0 "Vbias1" 20 0
+fet nfet -146 -128 -145 -127 80 48 "Gnd!" "Vbias3" 8 0 "Vbias2" 20 0 "a_n151_n176#" 20 0
+fet nfet -191 -128 -190 -127 80 48 "Gnd!" "Vbias3" 8 0 "a_n196_n176#" 20 0 "a_n191_n179#" 20 0
+fet nfet -232 -138 -231 -137 120 68 "Gnd!" "Vbias3" 8 0 "Vbias3" 30 0 "gnd" 30 0
+fet pfet -110 -62 -109 -61 192 104 "Vdd" "Vbias2" 8 0 "a_n115_n62#" 48 0 "Vbias1" 48 0
+fet pfet -146 -62 -145 -61 24 20 "Vdd" "Vbias2" 8 0 "Vbias2" 6 0 "Vdd" 6 0
+fet pfet -191 -62 -190 -61 192 104 "Vdd" "Vbiasp" 8 0 "Vdd" 48 0 "a_n191_n179#" 48 0
+fet pfet -232 -62 -231 -61 192 104 "Vdd" "Vbiasp" 8 0 "Vbias3" 48 0 "Vdd" 48 0
+fet pfet -110 13 -109 14 192 104 "Vdd" "Vbias1" 8 0 "a_n115_n62#" 48 0 "Vdd" 48 0
+subcap "a_n191_n179#" -22.35
